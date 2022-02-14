@@ -17,13 +17,13 @@ public class HelloClient {
 	Hello h = (Hello) registry.lookup("HelloService");
 
 	// Remote method invocation
-
-	Scanner input = new Scanner(System.in); //System.in is a standard input stream  
+	Scanner input = new Scanner(System.in);
 	System.out.print("Input Client Name: ");  
-	String clientName = input.nextLine();   //reads string
+	String clientName = input.nextLine();
 
 	String res = h.sayHello(clientName);
 	System.out.println(res);
+	input.close();
 
 	} catch (Exception e)  {
 		System.err.println("Error on client: " + e);
