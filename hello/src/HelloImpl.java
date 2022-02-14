@@ -9,8 +9,11 @@ public  class HelloImpl implements Hello {
 		message = s ;
 	}
 
-	public String sayHello() throws RemoteException {
-		return message ;
+	public String sayHello(String clientName) throws RemoteException {
+		// return message;
+		String result = message + " " + clientName;
+		System.out.println("Client Name: " + clientName);
+		return result;
 	}
 }
 
