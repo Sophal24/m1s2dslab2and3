@@ -1,3 +1,5 @@
+javac -d classes -classpath .:classes src/Accounting_itf.java
+javac -d classes -classpath .:classes src/Registry_itf.java
 javac -d classes -classpath .:classes src/Info_itf.java
 cd classes
 jar cvf ../lib/Info_itf.jar Info_itf.class
